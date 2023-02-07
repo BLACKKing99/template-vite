@@ -1,5 +1,6 @@
 <template>
   <div />
+  <foo />
 </template>
 
 <script lang='ts' setup>

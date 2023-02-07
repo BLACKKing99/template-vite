@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+
 import { resolve } from 'path'
 
 // https://vitejs.dev/config/
@@ -19,6 +21,12 @@ export default defineConfig({
         filepath: './tsconfig.node.json',
         globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
       }
+    }),
+    Components({
+      dts: './auto/auto-components.d.ts',
+      include: [/\.vue$/, /\.vue\?vue/],
+      dirs: ['src/components/common'],
+      extensions: ['vue']
     })
   ],
   resolve: {
