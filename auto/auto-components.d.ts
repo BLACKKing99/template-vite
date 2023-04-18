@@ -11,5 +11,7 @@ declare module '@vue/runtime-core' {
     ImgOver: typeof import('./../src/components/common/ImgOver.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Starport: typeof import('vue-starport')['Starport']
+    StarportCarrier: typeof import('vue-starport')['StarportCarrier']
   }
 }

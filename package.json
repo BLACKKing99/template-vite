@@ -11,7 +11,8 @@
   "dependencies": {
     "pinia": "^2.0.30",
     "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "vue-starport": "^0.3.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.19",
