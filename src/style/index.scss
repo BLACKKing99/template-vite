@@ -1,0 +1,14 @@
+.l-btn {
+  padding: 4px 8px;
+  background-color: #ff2e63;
+  border-radius: 4px;
+  font-size: 14px;
+  border: solid 1px #ff2e624a;
+  cursor: pointer;
+  color: #fff;
+  display: inline-block;
+  transition: 0.3s;
+  &:active {
+    transform: scale(0.9);
+  }
+}

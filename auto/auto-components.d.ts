@@ -7,7 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    CountDown: typeof import('./../src/components/common/CountDown.vue')['default']
+    ContextMenu: typeof import('./../src/components/common/contextMenu.vue')['default']
     ImgOver: typeof import('./../src/components/common/ImgOver.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
