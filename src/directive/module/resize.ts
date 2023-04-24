@@ -7,7 +7,7 @@ const ob = new ResizeObserver(lDebounce((resizes:any) => {
     const bindFn = map.get(resize.target)
     if (bindFn) bindFn(resize.contentRect)
   }
-}))
+}, 300, { isImmediate: true }))
 
 const vResize:Directive = {
   mounted (el, bind) {

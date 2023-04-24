@@ -1,4 +1,4 @@
-import { LFakeProgressOpt } from './type'
+import { LDebounceOpt, LFakeProgressOpt } from './type'
 
 class FakeProgress {
   progress:number = 0
@@ -48,10 +48,17 @@ class FakeProgress {
   }
 }
 
-const lDebounce = (fn:Function, delay:number = 300) => {
+const lDebounce = (fn:Function, delay:number = 300, opt:LDebounceOpt = {}) => {
   let timer:null| NodeJS.Timeout = null
+  let { isImmediate } = opt
   return function (this:any, ...arg:any[]) {
     if (timer) clearTimeout(timer)
+    if (isImmediate) {
+      fn.apply(this, arg)
+      timer = null
+      isImmediate = false
+      return
+    }
     timer = setTimeout(() => {
       fn.apply(this, arg)
       timer = null
