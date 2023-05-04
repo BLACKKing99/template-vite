@@ -1,10 +1,26 @@
 <template>
-  <div>
-    <div class="absolute left-0 top-0 w-96 h-96 bg-black">
-      <div
-        class=" left-0 top-0 bg-white w-40 h-40"
-        v-drag.x
-      />
+  <div class="w-screen h-screen overflow-hidden flex justify-center items-center mt-[-40px]">
+    <div class="w-[70vw] h-[50vh] border border-solid border-black">
+      <SplitPanel
+        :split-info="{
+          defaultPrecent:50,
+          direction:'level',
+          minPercent:20
+        }"
+      >
+        <template #paneF>
+          222
+        </template>
+        <template #paneS>
+          <SplitPanel
+            :split-info="{
+              defaultPrecent:50,
+              minPercent:20,
+              direction:'vertical'
+            }"
+          />
+        </template>
+      </SplitPanel>
     </div>
   </div>
 </template>
