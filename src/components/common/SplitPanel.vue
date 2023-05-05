@@ -38,6 +38,7 @@ interface ISplitInfo {
   defaultPrecent?: number
   direction?: 'vertical'|'level'
   minPercent?: number
+  maxPercent?: number
 }
 const props = defineProps<{
   splitInfo:ISplitInfo
@@ -96,6 +97,7 @@ const onMouseMove = (e:MouseEvent) => {
     const percents = Math.floor(((currentPage - offset) / targetWidth) * 10000) / 100
 
     if (splitInfo.value.minPercent && percents < splitInfo.value.minPercent) return
+    if (splitInfo.value.maxPercent && percents > splitInfo.value.maxPercent) return
     if (percents >= 100) return
     precent.value = percents
   }
