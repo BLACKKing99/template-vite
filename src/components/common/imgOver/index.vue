@@ -25,7 +25,7 @@
 </template>
 
 <script lang='ts' setup>
-import { formListType } from '@/types/components'
+import { formListType } from './type'
 import { PropType, StyleValue } from 'vue'
 
 const el = ref<HTMLDivElement | null>(null)

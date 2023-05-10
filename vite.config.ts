@@ -36,5 +36,12 @@ export default defineConfig({
       'views/': `${resolve(__dirname, './src/views')}/`,
       'api/': `${resolve(__dirname, './src/api')}/`
     }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "@/style/variable.scss";'
+      }
+    }
   }
 })

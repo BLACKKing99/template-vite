@@ -31,10 +31,10 @@
 <script lang='ts' setup>
 import { useContextMenu } from '@/hooks/useContextMenu'
 
-interface IMenuList{
-  id:number,
-  title:string
-}
+  interface IMenuList{
+    id:number,
+    title:string
+  }
 
 const contextMenuRef = ref<HTMLElement | null>(null)
 
@@ -43,8 +43,8 @@ const menuRef = ref<HTMLElement | null>(null)
 const { isMenu, x, y, closeMenu } = useContextMenu(contextMenuRef, menuRef)
 
 defineProps<{
-  menuList: IMenuList[]
-}>()
+    menuList: IMenuList[]
+  }>()
 
 const emit = defineEmits(['menuClick'])
 
@@ -54,6 +54,6 @@ const menuClick = (menu:any) => {
 }
 </script>
 
-<style scoped lang='scss'>
+  <style scoped lang='scss'>
 
-</style>
+  </style>

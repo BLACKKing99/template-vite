@@ -1,25 +1,20 @@
 <template>
-  <div
-    class="w-[99vw] overflow-hidden h-[3000px]"
-    v-scroll
-  >
-    222222222222
+  <div>
+    <LDialog v-model="visible" title="弹窗" />
+    <LButton
+      size="small"
+      @click="openDia"
+    >
+      open
+    </LButton>
   </div>
 </template>
 
 <script lang='ts' setup>
-import { Directive } from 'vue'
-
-const vScroll:Directive = {
-  mounted (el, bind) {
-    const ele = el as Element
-    ele.addEventListener('mousewheel', (e) => {
-      e.preventDefault()
-      e.stopPropagation()
-    })
-  }
+const visible = ref(false)
+const openDia = () => {
+  visible.value = true
 }
-
 </script>
 
 <style scoped lang='scss'>

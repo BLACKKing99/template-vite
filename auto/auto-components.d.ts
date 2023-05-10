@@ -7,11 +7,14 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ContextMenu: typeof import('./../src/components/common/contextMenu.vue')['default']
-    ImgOver: typeof import('./../src/components/common/ImgOver.vue')['default']
+    Common: typeof import('./../src/components/common/index.vue')['default']
+    ContextMenu: typeof import('./../src/components/common/contextMenu/index.vue')['default']
+    ImgOver: typeof import('./../src/components/common/imgOver/index.vue')['default']
+    LButton: typeof import('./../src/components/common/LButton/index.vue')['default']
+    LDialog: typeof import('./../src/components/common/LDialog/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SplitPanel: typeof import('./../src/components/common/SplitPanel.vue')['default']
+    SplitPanel: typeof import('./../src/components/common/SplitPanel/index.vue')['default']
     Starport: typeof import('vue-starport')['Starport']
     StarportCarrier: typeof import('vue-starport')['StarportCarrier']
   }
